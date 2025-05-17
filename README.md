@@ -1,6 +1,8 @@
 # Онлайн-библиотека SFBook
 Программа загружает предустановленные книги из папки books/, картинок к ним из папки images/ на [сайт](https://overworld231.github.io/Library/pages/index1.html) в файле [render_website](https://github.com/OverWorld231/Library/blob/main/render_website.py)
 
+![image](https://github.com/user-attachments/assets/568430ee-876d-4e73-8bbf-c5be5fd01b45)
+
 ## Установка
 Сделайте fork [репозитория с библиотекой](https://github.com/OverWorld231/Library) и сохраните себе на компьютер. Python3 должен быть уже установлен. Если вас его нет, то следуйте рекомендациям [статьи по установке Python для Windows.](https://skillbox.ru/media/code/kak_zapustit_python/) 
 Затем используйте pip (или pip3, есть конфликт с Python2) для установки зависимостей:
