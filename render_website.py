@@ -13,9 +13,7 @@ def render_page(books_page, number, books_pages):
     template = env.get_template("template.html")
     os.makedirs("./pages", exist_ok=True)
     rendered_page = template.render(
-        paired_books=books_page, 
-        page_number=number + 1, 
-        total_pages=len(books_pages)
+        paired_books=books_page, page_number=number + 1, total_pages=len(books_pages)
     )
     with open(f"./pages/index{number+1}.html", "w", encoding="utf8") as file:
         file.write(rendered_page)
@@ -24,8 +22,9 @@ def render_page(books_page, number, books_pages):
 def on_reload():
     meta_data = os.getenv("META_DATA", "meta_data.json")
     with open(meta_data, "r", encoding="utf-8") as my_file:
-        books = json.load(my_file)    
-    books_pages = list(chunked(books, 10))
+        books = json.load(my_file)
+        number_pages = 10
+    books_pages = list(chunked(books, number_pages))
     for number, books_page in enumerate(books_pages):
         render_page(books_page, number, books_pages)
 
