@@ -22,7 +22,7 @@ def render_page(books_page, number, books_pages):
 
 
 def on_reload():
-    meta_data = os.environ['META_DATA']
+    meta_data = os.getenv("META_DATA", "meta_data.json")
     with open(meta_data, "r", encoding="utf-8") as my_file:
         books = json.load(my_file)    
     books_pages = list(chunked(books, 10))
